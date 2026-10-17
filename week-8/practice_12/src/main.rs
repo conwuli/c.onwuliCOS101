@@ -9,6 +9,7 @@ fn main() {
     println!("First slice = {:?}",sliced_colors);
 
     //change the value of the original slice at the first index
-    sliced_colors[1] = "purple";
+    sliced_colors[0] = "purple";
     println!("Changed slice {:?}",sliced_colors);
+    println!("{:?}",colors );
 }

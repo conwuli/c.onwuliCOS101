@@ -2,7 +2,7 @@ fn main() {
     //initialize a mutable tuple 
     let mut mountain_heights = ("Everest",8848,"Fishtail",6993);
     println!("Original tuple: {:?}", mountain_heights);
-    //changed thirs and fourth element of a mutable tuple
+    //changed third and fourth element of a mutable tuple
 
     mountain_heights.2 = "Lthose";
     mountain_heights.3 = 8516;

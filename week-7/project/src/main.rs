@@ -60,35 +60,34 @@ fn cylinder()->f64 {
     return volume;
 }
 fn main() {
-    println!("Welcome, what shape would you like to calculate, please enter:\n1 for trapezium\n2 for rhombus\n3 for parallelogram\n4 for cube\n5 for cylinder");
+    println!("Welcome, what shape would you like to calculate:\ntrapezium\nrhombus\nparallelogram\ncube\ncylinder");
    
         loop {
              let mut input = String::new();
-        io::stdin().read_line(&mut input).expect("Invalid input");
-        let input:u32 = input.trim().parse().expect("Invalid input"); 
-               match input {
-            1 => {
+        io::stdin().read_line(&mut input).expect("Invalid input"); 
+               match input.trim() {
+            "trapezium" | "Trapezium" => {
                  println!("The area of this trapezium is {}", trapezium());
                  break;
             }
-            2 => {
+            "rhombus" | "Rhombus" => {
                     println!("The area of this rhombus is {}",rhombus());
                     break;
             }
-            3 => {
+            "parallelogram" | "Parallelogram" => {
                     println!("The area of this rhombus is {}",parallelogram());
                     break;
             }
-            4 => {
+            "cube" | "Cube" => {
                    println!("The surface area of this cube is {}",cube());
                    break;
             }
-            5 => {
+            "cylinder" | "Cylinder" => {
                       println!("The volume of this cylinder is {}", cylinder());
                       break;
             }
             _ => {
-                println!("Invalid, try again");
+                println!("Unfortunately, we can't calculate that shape right now, pick one of the available options");
             }
           }
         }             

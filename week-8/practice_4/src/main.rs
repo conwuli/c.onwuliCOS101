@@ -8,8 +8,8 @@ fn main() {
    print!("\nAge allocation:\n");
    
    //loop to iterate elements in vector
-   for i in 0..age.len() {
+   for a in 0..age.len() {
     //iterating through i on the vector
-    print!("{} is {} years old\n",name[i],age[i]);
+    print!("{} is {} years old\n",name[a],age[a]);
    }
 }

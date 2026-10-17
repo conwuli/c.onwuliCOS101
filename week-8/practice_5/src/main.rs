@@ -1,3 +1,4 @@
+use std::io;
 fn main() {
     //Create an empty vector "City"
     let mut city: Vec<String> = Vec::new();
@@ -6,12 +7,12 @@ fn main() {
     //Push new elements into
     let mut input1 = String::new();
     println!("How many cities do you want to enter");
-    std::io::stdin().read_line(&mut input1).expect("Failed to read");
+    io::stdin().read_line(&mut input1).expect("Failed to read");
     let city_num:i32 = input1.trim().parse().expect("Invalid input");
     for count in 0..city_num {
         let mut input2 = String::new();
         println!("Enter city {}",count+1);
-        std::io::stdin().read_line(&mut input2).expect("Failed to read input");
+        io::stdin().read_line(&mut input2).expect("Failed to read input");
         let new_city:String = input2.trim().parse().expect("Invalid input");
         city.push(new_city);
     }
@@ -21,6 +22,6 @@ fn main() {
     for i in city {
         //iterating through i on the vector
         println!("{} {}",count, i);
-        count=1;
+        count+=1;
     }
 }
