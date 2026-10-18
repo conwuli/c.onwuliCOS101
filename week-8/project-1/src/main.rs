@@ -106,7 +106,7 @@ fn teacher() {
 
 fn main() {
     let vsec = vec!["Office Admin","Academic","Lawyer","Teacher"];
-    println!("Public Service APS level checker");
+    println!("Welcome to the Public Service APS level checker");
     println!("What is your sector?, please enter:\n0 for Office Admin\n1 for Academic\n2 for Laywer\n3 for Teacher");
     let mut input1 = String::new();
     io::stdin().read_line(&mut input1).expect("Failed to read input");
@@ -114,7 +114,7 @@ fn main() {
     let sector = vsec[indexvsec] ;
     match sector.trim() {
         "Office Admin" => {
-           office_admin();
+           office_admin()
         }
         "Academic" => {
             academic()
