@@ -22,7 +22,7 @@ fn main() {
         println!("Enter Student {} name", i + 1);
         io::stdin().read_line(&mut name).expect("Failed to read");
         let name = name.trim().to_string();
-        vname.push(name); // pushes into the 
+        vname.push(name); // pushes into the vector
         
         let mut matricno = String::new();
         println!("Enter matric no {} ",i + 1);
